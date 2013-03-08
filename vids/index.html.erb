@@ -1,0 +1,28 @@
+<h1>Listing vids</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Videos</th>   
+    <th>Actions</th>
+   
+  </tr>
+
+<% @vids.each do |vid| %>
+  <tr>
+    <td><%= vid.name %></td>
+    <td><%= video_tag vid.vi.url, :size => "320x240", :controls => true %></td>
+    <td><dl class="vertical tabs">
+    	  
+    	  </br> </br>
+          <dd><%= link_to 'Show', vid %></dd>
+          <dd><%= link_to 'Edit', edit_vid_path(vid) %></dd>
+          <dd><%= link_to 'Destroy', vid, method: :delete, data: { confirm: 'Are you sure?' } %></dd>
+        </dl></td>
+
+  </tr>
+<% end %>
+</table>
+
+<br />
+<a class="round button" href="vids/new">Upload new Video</a>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <b>Name:</b>
+  <%= @vid.name %>
+</p>
+<div>
+ <div class="six columns">
+  	<%= video_tag @vid.vi.url, :size => "320x240", :controls => true %>
+  </div>
+  <div
+  <p>	file name:<%=  @vid.vi_file_name%>  </p>
+  <p>	content type:<%=  @vid.vi_content_type%> </p>
+  <p>	file size:<%=  @vid.vi_file_size%>  </p>
+  <p>	update at:<%=  @vid.vi_updated_at%>  </p> 	
+  </div> 
+</div>
+<%= link_to 'Edit', edit_vid_path(@vid) %> |
+<%= link_to 'Back', vids_path %>
+<!--	<%= video_tag "/videos/m.mp4", :size => "320x240", :controls => true %>-->
